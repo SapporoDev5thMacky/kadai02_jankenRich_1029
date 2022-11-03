@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css"/>
+   <link rel="stylesheet" href="./slick/slick.css"/>
+   <link rel="stylesheet" href="./slick/slick-theme.css"/>
+</head>
+<body>
+  <main>
+    <!-- header parts -->
+    <header>
+      <p id="header_text">じゃんけんゲーム リッチver</p>
+    </header>
+
+    <!-- Slide parts -->
+      <nav class="slider-box">
+          <div id="para1" class="slider">
+                <img id="item" name="bird1" value="1" class="bird1" src="img/1.JPG" alt="bird">
+                <img id="item" name="bird2" value="2" class="bird2" src="img/2.JPG" alt="bird">
+                <img id="item" name="bird3" value="3" class="bird3" src="img/3.JPG" alt="bird">
+                <img id="item" name="bird4" value="4" class="bird4" src="img/4.jpg" alt="bird">
+            <!-- スライドショーのためのClone> -->
+              <img id="item" name="bird1" value="1" class="bird1" src="img/1.JPG" alt="bird">
+              <img id="item" name="bird2" value="2" class="bird2" src="img/2.JPG" alt="bird">
+              <img id="item" name="bird3" value="3" class="bird3" src="img/3.JPG" alt="bird">
+              <img id="item" name="bird4" value="4" class="bird4" src="img/4.jpg" alt="bird">
+          </div>
+      </nav>
+
+    <!-- Instruction parts -->
+         <div id="main-text">
+            <div><p id="call">まずはスタート前に鳥の写真を1つクリック</p></div>
+            <button id="start">スタート</button>
+           <!--ここに以下の文章を入れる 
+            <p>僕はとりちん<img class="text_img" src="img/1 (1).JPG">です！</p> -->
+          <div id="call2">
+           <!-- ここに以下の文章を入れる 
+            <p id="opponent">鳥たちは何を出すか？<br>下の図をクリックしたら鳥も同時に出すよ</p> -->
+          </div>
+        </div>
+
+     <!-- Janken parts -->
+    <div id="game" style="display: none;">
+      <div class="box">
+          <div class="you">
+            <div class="instruction">
+              <p>グーなら下図をクリック</p>
+            </div>
+            <img id="btn0" class="btn" onclick="select_janken(0);" src="img/janken_0.jpg" alt="btn">
+          </div>
+          <div class="you">
+            <div class="instruction">
+              <p>チョキなら下図をクリック</p>
+            </div>
+            <img id="btn1" class="btn" onclick="select_janken(1);" src="img/janken_1.jpg" alt="btn">
+          </div>
+          <div class="you">
+            <div class="instruction">
+              <p>パーなら下図をクリック</p>
+            </div>
+            <img id="btn2" class="btn"  onclick="select_janken(2);" src="img/janken_2.jpg" alt="btn">
+          </div>
+        </div>
+      </div>
+ 
+  
+     <!-- Results parts -->
+      <div class="result_box"> 
+          <div class="result">
+            <p class="games"># of Games</p>
+            <p id="count">0<span class="games">G / 10G </span></p>
+          </div>
+          <div id="space" class="result_text">
+               <!-- main.jsのAppendでここに要素を追加できる -->
+          </div>
+          <div class="reset_area">
+            <button id="reset">リセット</button>
+            <p id="reset_text">再開する</p>
+          </div> 
+    
+        </div>
+      </div>
+  
+  </main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

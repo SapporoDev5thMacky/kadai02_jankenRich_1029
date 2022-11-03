@@ -1,0 +1,214 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* https://saruwakakun.com/html-css/reference/box-sizing */
+}
+
+.main{
+  font-size: 1.2rem;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+    /* 余計な余白をとるのがoveflow hidden */
+  }
+
+
+/* 背景画像*/
+body{
+  background-image: url('img/haikei0.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment:scroll;
+  width: 100%;
+  height: 100%;
+  ;}
+
+/* ヘッダー */
+header{
+  background-color: green;
+  color: white;
+  padding: 10px 10px;
+}
+/* スライドショー */
+.slider-box{
+  display: flex;
+  height: 200px;
+  width: 200px;
+}
+
+.slider {
+  display: flex;
+  animation: loopAnimation 10s linear infinite;
+  width: 100%;
+  height: 200px; 
+}
+@keyframes loopAnimation{
+  0%{
+    transform: translate(0%);
+  }
+  100%{
+    transform: translate(-100%);
+  }
+}
+
+#item{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+/* <!-- Instruction parts --> */
+#main-text {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+ }
+
+#call {
+  margin: 0;
+}
+
+#main-text p {
+  color: white;
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  /* display: inline-block; */
+  background-color: green;
+}
+
+#emphasis{
+  color: red;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.instruction {
+  border: solid 2px white;
+  padding: 10px;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 13px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: black;
+}
+.instruction p {
+  text-align: center;
+  margin: 0;
+}
+
+
+/* <!-- Janken parts --> */
+.you {
+  text-align: center;
+  margin-right: 50px;
+}
+
+.box {
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  width: 100px;
+}
+
+
+/* <!-- Results parts --> */
+
+.result_box {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  margin: 10px auto;
+  align-items: center;
+}
+.result {
+  height: 60px;
+  width: 120px;
+  background-color: rgb(10, 72, 10);
+  text-align:center;
+}
+.games {
+  color: white;
+  padding: 10px 5px;
+}
+
+.result_text {
+  transform: translatex(-20%);
+  width: 90px;
+  height: 270px;
+  background-color: transparent;
+}
+
+.result_text P, #opponent {
+  color: white;
+  background-color: rgba(13, 228, 27, 0.342);
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 10px;
+
+}
+
+.tsuika {
+  width: 50px;
+  margin-right: 5px;
+  padding: 0;
+}
+
+#count, #call {
+  color: white;
+}
+
+.text_img{
+  width: 80px;
+  vertical-align: middle;
+}
+
+/* -------------------------------------------
+リセット吹き出し
+ーーーーーーーーーーーーーーーーーーーーーーー */
+.reset_area{
+  position: relative;
+}
+
+#reset_text{
+  position: absolute;
+  top: -60px;
+  left: 80px;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 0 5px;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  background: rgb(6, 230, 81);
+  border-radius: 50%;
+  box-sizing: border-box;
+
+}
+
+#reset_text:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid  rgb(6, 230, 81);
+  z-index: 0;
+}
