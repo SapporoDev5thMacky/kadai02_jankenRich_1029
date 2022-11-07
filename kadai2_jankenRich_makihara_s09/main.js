@@ -63,7 +63,7 @@ function select_janken(p_janken_r) {
           $('#space').append('<p class="tsuika">勝ち</p>'); 
       } 
 
-    //パー宝箱Cの処理
+    //パー処理
     else if(p_janken_r === 2 && p_janken_r - janken_r === 2) {
          $('#space').append('<p class="tsuika">勝ち</p>'); 
  
